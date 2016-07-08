@@ -2,9 +2,7 @@ package dry;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 
 public final class JdbcUtils {
 
@@ -23,39 +21,9 @@ public final class JdbcUtils {
 			try {
 				Class.forName("db.driver.Name");
 			} catch (ClassNotFoundException e) {
-				throw new RuntimeException("ERROR: Can't initialize driver");
+				throw new RuntimeException(e);
 			}
 			initialized = true;
-		}
-	}
-
-	public static void close(ResultSet rs) {
-		if (rs != null) {
-			try {
-				rs.close();
-			} catch (SQLException e) {
-				throw new RuntimeException(e);
-			}
-		}
-	}
-
-	public static void close(Statement st) {
-		if (st != null) {
-			try {
-				st.close();
-			} catch (SQLException e) {
-				throw new RuntimeException(e);
-			}
-		}
-	}
-
-	public static void close(Connection cn) {
-		if (cn != null) {
-			try {
-				cn.close();
-			} catch (SQLException e) {
-				throw new RuntimeException(e);
-			}
 		}
 	}
 }
