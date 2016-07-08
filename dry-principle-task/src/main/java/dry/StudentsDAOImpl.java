@@ -71,8 +71,7 @@ public class StudentsDAOImpl implements StudentsDAO {
 			preparedStatement.setInt(2, to);
 			try (ResultSet resultSet = preparedStatement.executeQuery()) {
 				while (resultSet.next()) {
-					Student student = getStudentFromResultSet(resultSet);
-					students.add(student);
+					students.add(getStudentFromResultSet(resultSet));
 				}
 			}
 		} catch (SQLException e) {
