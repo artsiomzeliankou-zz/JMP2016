@@ -15,17 +15,21 @@ public class StudentsDAOImpl implements StudentsDAO {
 			PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM STUDENTS");
 			ResultSet resultSet = preparedStatement.executeQuery()) {
 				while (resultSet.next()) {
-					Student student = new Student();
-					student.setId(resultSet.getLong("ID"));
-					student.setName(resultSet.getString("NAME"));
-					student.setAge(resultSet.getInt("AGE"));
-					students.add(student);
+					students.add(getStudentFromResultSet(resultSet));
 				}
 			
 		} catch (SQLException e) {
 			throw new RuntimeException(e);
 		}
 		return students;
+	}
+
+	private Student getStudentFromResultSet(ResultSet resultSet) throws SQLException {
+		Student student = new Student();
+		student.setId(resultSet.getLong("ID"));
+		student.setName(resultSet.getString("NAME"));
+		student.setAge(resultSet.getInt("AGE"));
+		return student;
 	}
 
     @Override
@@ -36,10 +40,7 @@ public class StudentsDAOImpl implements StudentsDAO {
 			preparedStatement.setLong(1, id);
 			try (ResultSet resultSet = preparedStatement.executeQuery()) {
 				while (resultSet.next()) {
-					student = new Student();
-					student.setId(resultSet.getLong("ID"));
-					student.setName(resultSet.getString("NAME"));
-					student.setAge(resultSet.getInt("AGE"));
+					student = getStudentFromResultSet(resultSet);
 				}
 			}
 		} catch (SQLException e) {
@@ -70,10 +71,7 @@ public class StudentsDAOImpl implements StudentsDAO {
 			preparedStatement.setInt(2, to);
 			try (ResultSet resultSet = preparedStatement.executeQuery()) {
 				while (resultSet.next()) {
-					Student student = new Student();
-					student.setId(resultSet.getLong("ID"));
-					student.setName(resultSet.getString("NAME"));
-					student.setAge(resultSet.getInt("AGE"));
+					Student student = getStudentFromResultSet(resultSet);
 					students.add(student);
 				}
 			}
