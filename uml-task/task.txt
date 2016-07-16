@@ -1,0 +1,103 @@
+Dear Listener, I would like you to perform following home task on one's own, to get the basic experience in UML. Please, draw UML diagrams, according to information provided below. It contains high-level description of the system and task for each diagram type.
+
+You are welcome to add any rational assumptions or improve the provided requirements (add integration points etc). So you are not limited by scope and budget here. J
+
+Please, aim on getting experience in UML modelling of the system, but not just formally matching provided requirements! So be creative and approach the description below as just a reference point for your model!
+
+ 
+
+General overview
+ Customer needs a training Web-portal to provide some services of the big training agency in the web:
+
+- To provide and sell online automatic tests for certification;
+
+- To provide the ability to apply for the training and follow the training status/info.
+
+- To provide and sell some books written by the lectors of some trainings.
+ 
+
+ 
+
+Details
+ Unauthorized users:
+
+The general (unauthorized) user should be able to access the portal, see the list of trainings by categories, the list of certification tests, the list and description of provided books.
+
+The general (unauthorized) user should also be able to see newsline on the portal.
+
+Authorized users:
+
+All authorized users should be able to read and leave comments for news.
+
+The authorized user can select the book, enter payment data and order the book to be delivered by the post service.
+
+Authorized user can apply for participation in the training from the portal, but can pay for the training there.
+
+Authorized user should be able to edit personal info on the profile page, see the list of trainings the user attended before or added to the group for the lessons in future. User should also see on in the profile the list of passed tests and available certificates.
+
+Authorized users can pass the online testing in several categories and order paper or digital cope of the certificate if it is available as a result of testing (paid additionally).
+
+Any payment on the portal can be performed by the logged-in users, the credit card or PayPal can be used.
+
+There also should be users with admin and trainer roles in the system.
+
+Admins:
+
+Administrators can edit user profiles and roles, add and edit news in newsline, add/remove/edit trainings, edit the list of categories for trainings and books, add books to the bookstore page, edit data for the particular lessons of the training including the day and time, lector name and the group of attendees. If the training is created w/o any lessons or all lessons are already passed for the training, it should be displayed as archived in the system.
+
+The draft of the lessons for the particular day and time can be created in the system by both the admin and trainer. Lessons can include several days and time periods. If there is not finished lessons created for the training, training should be displayed in the system as actual.
+
+The list of attendees for the particular lessons are created in the system by the admin only. When the list is filled and lessons are marked as active by admin the selected trainer (lector) and all attendees should receive e-mail notification. The training should become planned in this case. All attendees of the training should be registered in the system automatically.
+
+If the first lesson of the training is already started but the last is not finished, the training should be in the “in progress” status. All trainers and admins should be able to view all lessons in all statuses.  Other authorized users should see only the lessons, they participate in as attendees.
+
+Trainers:
+
+The trainer can edit his lessons (excluding the list of attendees) if it is not active. Admin can change the parameters of the lessons or remove it in any moment
+
+Class (Domain model)
+ Please, draw general class diagram for the system, specifying attributes, connection types and multiplicities to depict the domain model,
+ 
+
+ 
+
+Package
+ Please, draw the package diagram to group all service interfaces with can be used for the application by your point of view (or diagram for any other possible grouping: multi-layer application model; technology, should be used for data access for different classes etc).
+ 
+
+ 
+
+Component
+ Please, draw the component diagram to depict the high-level architecture of the system (as you see it)
+ 
+
+ 
+
+ 
+
+Use Case
+ Please draw use case diagram for all actors of the system. Give attention to the use cases, general for several user roles and decomposition of User Cases. 
+ 
+
+ 
+
+Activity
+ Describe the process of creating and editing lesson in the system (starting from the creation of the training).
+
+ 
+ 
+
+ 
+
+ 
+
+State Machine
+ Describe the flow of training states in the system.
+ 
+
+ 
+
+Sequence
+ Draw the diagram, which describes the scenario of using the bookstore (selecting and making order and paying for the book) in the system (user is not registered in the system initially).
+ 
+ 
