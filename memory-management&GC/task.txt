@@ -1,0 +1,5 @@
+Design and implement code that will introduce:
+
+1.java.lang.OutOfMemoryError: Java heap space. Do not use arrays or collections.
+
+1. java.lang.StackOverflowError. Do not use recursive methods.
