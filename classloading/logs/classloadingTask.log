@@ -1,0 +1,121 @@
+2016-08-06 08:17:19,631 - com.epam.jmp.classloading.Runner - INFO - Let's start application running!
+2016-08-06 08:17:19,633 - com.epam.jmp.classloading.Runner - INFO - For terminate application running enter in any field this text: "stop"
+2016-08-06 08:17:19,634 - com.epam.jmp.classloading.Runner - INFO - Enter jar file name
+2016-08-06 08:17:45,433 - com.epam.jmp.classloading.Runner - INFO - Enter file location path
+2016-08-06 08:17:49,773 - com.epam.jmp.classloading.Runner - INFO - Enter full class name
+2016-08-06 08:17:54,363 - com.epam.jmp.classloading.CustomClassLoader - INFO - Class not found in custom cache, let's find in system
+2016-08-06 08:17:54,375 - com.epam.jmp.classloading.CustomClassLoader - ERROR - JarFile ‚test.jar not found
+2016-08-06 08:19:51,860 - com.epam.jmp.classloading.Runner - INFO - Let's start application running!
+2016-08-06 08:19:51,875 - com.epam.jmp.classloading.Runner - INFO - For terminate application running enter in any field this text: "stop"
+2016-08-06 08:19:51,875 - com.epam.jmp.classloading.Runner - INFO - Enter jar file name
+2016-08-06 08:20:00,755 - com.epam.jmp.classloading.Runner - INFO - Enter file location path
+2016-08-06 08:20:12,548 - com.epam.jmp.classloading.Runner - INFO - Enter full class name
+2016-08-06 08:20:25,485 - com.epam.jmp.classloading.CustomClassLoader - INFO - Class not found in custom cache, let's find in system
+2016-08-06 08:20:25,489 - com.epam.jmp.classloading.CustomClassLoader - ERROR - JarFile d:/jartest not found
+2016-08-06 08:23:04,814 - com.epam.jmp.classloading.Runner - INFO - Let's start application running!
+2016-08-06 08:23:04,814 - com.epam.jmp.classloading.Runner - INFO - For terminate application running enter in any field this text: "stop"
+2016-08-06 08:23:04,814 - com.epam.jmp.classloading.Runner - INFO - Enter jar file name
+2016-08-06 08:23:08,833 - com.epam.jmp.classloading.Runner - INFO - Enter file location path
+2016-08-06 08:23:13,840 - com.epam.jmp.classloading.Runner - INFO - Enter full class name
+2016-08-06 08:23:24,982 - com.epam.jmp.classloading.CustomClassLoader - INFO - Class not found in custom cache, let's find in system
+2016-08-06 08:23:24,987 - com.epam.jmp.classloading.CustomClassLoader - ERROR - JarFile d:/jartest not found
+2016-08-06 08:23:24,987 - com.epam.jmp.classloading.Runner - INFO - Class not found, let's start again
+2016-08-06 08:23:24,987 - com.epam.jmp.classloading.Runner - INFO - Enter jar file name
+2016-08-06 08:24:26,440 - com.epam.jmp.classloading.Runner - INFO - Let's start application running!
+2016-08-06 08:24:26,456 - com.epam.jmp.classloading.Runner - INFO - For terminate application running enter in any field this text: "stop"
+2016-08-06 08:24:26,456 - com.epam.jmp.classloading.Runner - INFO - Enter jar file name
+2016-08-06 08:24:29,811 - com.epam.jmp.classloading.Runner - INFO - Enter file location path
+2016-08-06 08:24:36,182 - com.epam.jmp.classloading.Runner - INFO - Enter full class name
+2016-08-06 08:24:43,497 - com.epam.jmp.classloading.CustomClassLoader - INFO - Class not found in custom cache, let's find in system
+2016-08-06 08:24:43,509 - com.epam.jmp.classloading.CustomClassLoader - ERROR - JarFile d:/testtest not found
+2016-08-06 08:24:43,509 - com.epam.jmp.classloading.Runner - INFO - 
+ Class not found, let's start again
+2016-08-06 08:24:43,509 - com.epam.jmp.classloading.Runner - INFO - Enter jar file name
+2016-08-06 08:25:55,383 - com.epam.jmp.classloading.Runner - INFO - Let's start application running!
+2016-08-06 08:25:55,383 - com.epam.jmp.classloading.Runner - INFO - For terminate application running enter in any field this text: "stop"
+2016-08-06 08:25:55,383 - com.epam.jmp.classloading.Runner - INFO - Enter jar file name
+2016-08-06 08:25:58,414 - com.epam.jmp.classloading.Runner - INFO - Enter file location path
+2016-08-06 08:25:59,262 - com.epam.jmp.classloading.Runner - INFO - Enter full class name
+2016-08-06 08:26:00,564 - com.epam.jmp.classloading.CustomClassLoader - INFO - Class not found in custom cache, search will be handled by parent ClassLoader
+2016-08-06 08:26:00,566 - com.epam.jmp.classloading.CustomClassLoader - ERROR - JarFile fdsffsd not found
+2016-08-06 08:26:00,566 - com.epam.jmp.classloading.Runner - INFO - 
+ Class not found, let's start again
+2016-08-06 08:26:00,567 - com.epam.jmp.classloading.Runner - INFO - Enter jar file name
+2016-08-06 08:26:30,569 - com.epam.jmp.classloading.Runner - INFO - Let's start application running!
+2016-08-06 08:26:30,569 - com.epam.jmp.classloading.Runner - INFO - For terminate application running enter in any field this text: "stop"
+2016-08-06 08:26:30,569 - com.epam.jmp.classloading.Runner - INFO - Enter jar file name
+2016-08-06 08:26:35,459 - com.epam.jmp.classloading.Runner - INFO - Enter file location path
+2016-08-06 08:26:36,207 - com.epam.jmp.classloading.Runner - INFO - Enter full class name
+2016-08-06 08:26:37,343 - com.epam.jmp.classloading.CustomClassLoader - INFO - Class not found in custom cache, parent ClassLoader will proceed search
+2016-08-06 08:26:37,344 - com.epam.jmp.classloading.CustomClassLoader - ERROR - JarFile ˚‚‡‚ not found
+2016-08-06 08:26:37,344 - com.epam.jmp.classloading.Runner - INFO - 
+ Class not found, let's start again
+2016-08-06 08:26:37,344 - com.epam.jmp.classloading.Runner - INFO - Enter jar file name
+2016-08-06 08:27:09,621 - com.epam.jmp.classloading.Runner - INFO - Let's start application running!
+2016-08-06 08:27:09,621 - com.epam.jmp.classloading.Runner - INFO - For terminate application running enter in any field this text: "stop"
+2016-08-06 08:27:09,621 - com.epam.jmp.classloading.Runner - INFO - Enter jar file name
+2016-08-06 08:27:14,175 - com.epam.jmp.classloading.Runner - INFO - Enter file location path
+2016-08-06 08:27:15,337 - com.epam.jmp.classloading.Runner - INFO - Enter full class name
+2016-08-06 08:27:16,301 - com.epam.jmp.classloading.CustomClassLoader - INFO - Class not found in custom cache, parent ClassLoader will proceed search
+2016-08-06 08:27:16,301 - com.epam.jmp.classloading.CustomClassLoader - ERROR - JarFile dfdfdfsdfsd not found
+2016-08-06 08:27:16,301 - com.epam.jmp.classloading.Runner - INFO - Class not found, let's start again 
+
+2016-08-06 08:27:16,301 - com.epam.jmp.classloading.Runner - INFO - Enter jar file name
+2016-08-06 08:30:07,415 - com.epam.jmp.classloading.Runner - INFO - Enter file location path
+2016-08-06 08:30:15,079 - com.epam.jmp.classloading.Runner - INFO - Enter full class name
+2016-08-06 08:30:38,861 - com.epam.jmp.classloading.CustomClassLoader - INFO - Class not found in custom cache, parent ClassLoader will proceed search
+2016-08-06 08:30:38,870 - com.epam.jmp.classloading.CustomClassLoader - ERROR - JarFile d:/cltest not found
+2016-08-06 08:30:38,870 - com.epam.jmp.classloading.Runner - INFO - Class not found, let's start again 
+
+2016-08-06 08:30:38,870 - com.epam.jmp.classloading.Runner - INFO - Enter jar file name
+2016-08-06 08:32:28,878 - com.epam.jmp.classloading.Runner - INFO - Let's start application running!
+2016-08-06 08:32:28,894 - com.epam.jmp.classloading.Runner - INFO - For terminate application running enter in any field this text: "stop"
+2016-08-06 08:32:28,894 - com.epam.jmp.classloading.Runner - INFO - Enter jar file name
+2016-08-06 08:33:03,293 - com.epam.jmp.classloading.Runner - INFO - Enter file location path
+2016-08-06 08:33:12,009 - com.epam.jmp.classloading.Runner - INFO - Enter full class name
+2016-08-06 08:34:04,167 - com.epam.jmp.classloading.CustomClassLoader - INFO - Class not found in custom cache, parent ClassLoader will proceed search
+2016-08-06 08:34:48,736 - com.epam.jmp.classloading.CustomClassLoader - ERROR - JarFile d:/cltest.jar not found
+2016-08-06 08:34:48,741 - com.epam.jmp.classloading.Runner - INFO - Class not found, let's start again 
+
+2016-08-06 08:34:48,742 - com.epam.jmp.classloading.Runner - INFO - Enter jar file name
+2016-08-06 08:36:26,439 - com.epam.jmp.classloading.Runner - INFO - Enter file location path
+2016-08-06 08:36:41,023 - com.epam.jmp.classloading.Runner - INFO - Enter full class name
+2016-08-06 08:39:08,328 - com.epam.jmp.classloading.CustomClassLoader - INFO - Class not found in custom cache, parent ClassLoader will proceed search
+2016-08-06 08:39:45,628 - com.epam.jmp.classloading.CustomClassLoader - ERROR - JarFile d:/cltest.jar not found
+2016-08-06 08:39:45,638 - com.epam.jmp.classloading.Runner - INFO - Class not found, let's start again 
+
+2016-08-06 08:39:45,638 - com.epam.jmp.classloading.Runner - INFO - Enter jar file name
+2016-08-06 08:41:28,226 - com.epam.jmp.classloading.Runner - INFO - Let's start application running!
+2016-08-06 08:41:28,226 - com.epam.jmp.classloading.Runner - INFO - For terminate application running enter in any field this text: "stop"
+2016-08-06 08:41:28,226 - com.epam.jmp.classloading.Runner - INFO - Enter jar file name
+2016-08-06 08:41:36,118 - com.epam.jmp.classloading.Runner - INFO - Enter file location path
+2016-08-06 08:41:40,395 - com.epam.jmp.classloading.Runner - INFO - Enter full class name
+2016-08-06 08:42:19,194 - com.epam.jmp.classloading.CustomClassLoader - INFO - Class not found in custom cache, parent ClassLoader will proceed search
+2016-08-06 08:44:35,601 - com.epam.jmp.classloading.CustomClassLoader - INFO - Class outofmemoryerror.Runner loaded successfully
+2016-08-06 08:44:35,617 - com.epam.jmp.classloading.Runner - INFO - 
+ Class outofmemoryerror.Runner successfully loaded, let's start again
+2016-08-06 08:44:35,617 - com.epam.jmp.classloading.Runner - INFO - Enter jar file name
+2016-08-06 08:44:51,412 - com.epam.jmp.classloading.Runner - INFO - Enter file location path
+2016-08-06 08:45:01,056 - com.epam.jmp.classloading.Runner - INFO - Enter full class name
+2016-08-06 08:45:09,576 - com.epam.jmp.classloading.CustomClassLoader - INFO - Class not found in custom cache, parent ClassLoader will proceed search
+2016-08-06 08:45:46,980 - com.epam.jmp.classloading.CustomClassLoader - ERROR - JarFile d:/cltest not found
+2016-08-06 08:45:46,986 - com.epam.jmp.classloading.Runner - INFO - Class not found, let's start again 
+
+2016-08-06 08:45:46,986 - com.epam.jmp.classloading.Runner - INFO - Enter jar file name
+2016-08-06 08:46:05,553 - com.epam.jmp.classloading.Runner - INFO - Let's start application running!
+2016-08-06 08:46:05,553 - com.epam.jmp.classloading.Runner - INFO - For terminate application running enter in any field this text: "stop"
+2016-08-06 08:46:05,553 - com.epam.jmp.classloading.Runner - INFO - Enter jar file name
+2016-08-06 08:46:10,702 - com.epam.jmp.classloading.Runner - INFO - Enter file location path
+2016-08-06 08:46:14,625 - com.epam.jmp.classloading.Runner - INFO - Enter full class name
+2016-08-06 08:46:33,653 - com.epam.jmp.classloading.CustomClassLoader - INFO - Class not found in custom cache, parent ClassLoader will proceed search
+2016-08-06 08:46:33,665 - com.epam.jmp.classloading.CustomClassLoader - INFO - Class outofmemoryerror.Runner loaded successfully
+2016-08-06 08:46:33,666 - com.epam.jmp.classloading.Runner - INFO - 
+ Class outofmemoryerror.Runner successfully loaded, let's start again
+2016-08-06 08:46:33,666 - com.epam.jmp.classloading.Runner - INFO - Enter jar file name
+2016-08-06 08:46:49,462 - com.epam.jmp.classloading.Runner - INFO - Enter file location path
+2016-08-06 08:46:53,995 - com.epam.jmp.classloading.Runner - INFO - Enter full class name
+2016-08-06 08:46:59,046 - com.epam.jmp.classloading.CustomClassLoader - INFO - Class not found in custom cache, parent ClassLoader will proceed search
+2016-08-06 08:46:59,050 - com.epam.jmp.classloading.CustomClassLoader - INFO - Class outofmemoryerror.Runner loaded successfully
+2016-08-06 08:46:59,050 - com.epam.jmp.classloading.Runner - INFO - 
+ Class outofmemoryerror.Runner successfully loaded, let's start again
+2016-08-06 08:46:59,051 - com.epam.jmp.classloading.Runner - INFO - Enter jar file name
