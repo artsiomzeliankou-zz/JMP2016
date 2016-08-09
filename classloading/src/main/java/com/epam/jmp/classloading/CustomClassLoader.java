@@ -12,9 +12,17 @@ import org.apache.log4j.Logger;
 public class CustomClassLoader extends ClassLoader {
 	private static Logger logger = Logger.getLogger(CustomClassLoader.class);
 	private final HashMap<String, Class<?>> customCache = new HashMap<String, Class<?>>();
-	private final String path;
-	private final String fileName;
+	private String path;
+	private String fileName;
 
+	public CustomClassLoader(ClassLoader parent){
+		super(parent);
+	}
+	
+	public CustomClassLoader(){
+		this(CustomClassLoader.class.getClassLoader());
+	}
+	
 	public CustomClassLoader(String jarName, String path) {
 		this.fileName = jarName;
 		this.path = path;
@@ -73,5 +81,21 @@ public class CustomClassLoader extends ClassLoader {
 	@Override
 	public String toString() {
 		return CustomClassLoader.class.getName();
+	}
+
+	public String getPath() {
+		return path;
+	}
+
+	public void setPath(String path) {
+		this.path = path;
+	}
+
+	public String getFileName() {
+		return fileName;
+	}
+
+	public void setFileName(String fileName) {
+		this.fileName = fileName;
 	}
 }
