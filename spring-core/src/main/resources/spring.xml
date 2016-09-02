@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+
+	<bean id="item" class="org.shop.data.Item" autowire="byName">
+		<property name="id" value="42" />
+		<property name="price" value="1000" />
+	</bean>
+
+	<bean id="order" class="org.shop.data.Order" autowire="byType">
+		<property name="id" value="100500"/>
+	</bean>
+	
+	<bean id="_user_" class="org.shop.data.User">
+		<property name="id" value="777"/>
+		<property name="username" value="Artsiom"/>
+	</bean>
+	
+	<bean id="product" class="org.shop.data.Product">
+		<property name="id" value="20"/>
+		<property name="name" value="Knife"/>
+		<property name="description" value="kitchen knife"/>
+	</bean>
+
+	<alias name="item" alias="item-alias" />
+
+
+</beans>
