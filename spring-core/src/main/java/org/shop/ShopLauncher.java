@@ -21,22 +21,25 @@ public class ShopLauncher {
     	ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
     	
     	/**
-    	 * 2. Getting bean by alias    	  	
+    	 * 2. Getting bean by name    	  	
+    	 */
+    	Item itemByName = (Item) context.getBean("item");
+    	
+    	/**
+    	 * 3. Getting bean by alias    	  	
     	 */
     	Item item = (Item) context.getBean("item-alias");
     	
     	/**
-    	 * 3. By using autowire="byName" in "item" bean
+    	 * 4. By using autowire="byName" in "item" bean
     	 * spring set its "order" and "product" fields by name match  
     	 * 
     	 * 
-    	 * 4. By using autowire="byType" in "order" bean
+    	 * 5. By using autowire="byType" in "order" bean
     	 * spring set its "user" field by type match 
     	 * 
-    	 * 5. By using autowire="autodetect" 
+    	 * 6. By using autowire="autodetect" 
     	 * spring will apply closest match: by type, by name or constructor
-    	 * Unfortunately this template does not consists of quite enough classes for such example
-    	 * 
     	 */
     	
     	
