@@ -129,8 +129,7 @@ public class Runner {
 		    char c = chars[random.nextInt(chars.length)];
 		    sb.append(c);
 		}
-		String output = sb.toString();
-		return output;
+		return sb.toString();
 	}
 
 	private static Timestamp generateTimestamp(long beginTime, long endTime) {
@@ -149,8 +148,8 @@ public class Runner {
 				PreparedStatement ps = conn.prepareStatement(Constants.SQL_SELECT_USERS);) {
 			Timestamp searchFrom = Timestamp.valueOf(Constants.QUERY_LIKE_START_DATE);
 			Timestamp searchTo = Timestamp.valueOf(Constants.QUERY_LIKE_END_DATE);
-			int friendshipsNumber = 20;
-			int likesNumber = 20;
+			int friendshipsNumber = 100;
+			int likesNumber = 100;
 			ps.setTimestamp(1, searchFrom);
 			ps.setTimestamp(2, searchTo);
 			ps.setInt(3, friendshipsNumber);
