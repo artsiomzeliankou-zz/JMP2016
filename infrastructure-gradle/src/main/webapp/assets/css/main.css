@@ -1,0 +1,345 @@
+* {
+	font-family: 'Open Sans', arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+		background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #EBEBEB),
+		color-stop(1, #F7F6F6));
+	background-image: -o-linear-gradient(bottom, #EBEBEB 0%, #F7F6F6 100%);
+	background-image: -moz-linear-gradient(bottom, #EBEBEB 0%, #F7F6F6 100%);
+	background-image: -webkit-linear-gradient(bottom, #EBEBEB 0%, #F7F6F6 100%);
+	background-image: -ms-linear-gradient(bottom, #EBEBEB 0%, #F7F6F6 100%);
+	background-image: linear-gradient(to bottom, #EBEBEB 0%, #F7F6F6 100%);
+	font-family: 'Open Sans', arial, sans-serif;
+	min-height: 700px;
+	
+}
+
+a {
+	color: #CCC;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.mainHeader {
+	width: 960px;
+	height: 80px;
+	margin: 0 auto;
+	border-bottom: 1px solid #868686;
+	position: relative;
+	text-align: right;
+}
+
+.mainHeader .logo {
+	position: absolute;
+	color: #747170;
+	font-size: 50px;
+	display: block;
+}
+
+.mainHeader .logo:hover {
+	text-decoration: none;
+}
+
+.mainHeader .login {
+	padding: 25px 22px 0 0;
+	color: #514E4C;
+	font-size: 18px;
+}
+
+.mainHeader .login span i {
+	margin-right: 0px;
+	margin-left: 10px;
+}
+
+.mainHeader .login a {
+	color: #0057A9;
+	margin-left: 35px;
+}
+
+.footer {
+	width: 960px;
+	height: 80px;
+	margin: 0 auto;
+	border-top: 1px solid #868686;
+	position: relative;
+	text-align: center;
+	font-size: 14px;
+	color: #545354;
+	line-height: 2.5;
+}
+
+.w960 {
+	width: 960px;
+	margin: 0 auto;
+}
+
+.mainCont {
+	padding: 15px 0px;
+	min-height: 400px;
+	position: relative;
+}
+
+.criteriaCont {
+	background: #DADADA;
+	width: 100%;
+	padding: 10px 0px;
+}
+
+.criteriaCont a {
+	color: #0067BB;
+	margin-left: 20px;
+	font-size: 18px;
+	font-weight: bold;
+	padding: 10px 5px;
+	border: 1px solid #DADADA;
+	display: inline-block;
+}
+
+.criteriaCont a.extraCrit {
+	float: right;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	border: 1px solid #0067BB;
+	margin-left: 0px;
+	margin-right: 20px;
+}
+
+.criteriaCont a.extraCrit:hover {
+	text-decoration: none;
+}
+	
+.tableCont {
+	
+}
+
+.tableCont h2 {
+	color: #057EC1;
+	font-size: 24px;
+	font-weight: normal;
+	line-height: 1;
+	padding: 60px 0 10px 0;
+}
+
+.tableCont table {
+	width: 100%;
+}
+
+.tableCont table, .tableCont table tr, .tableCont table td {
+	border-color: #BBBDBD;
+	background: #FFFFFF;
+}
+
+.tableCont table td {
+	height: 40px;
+}
+
+.tableCont table td span {
+	margin-left: 10px;
+	font-style: italic;
+}
+
+.tableCont table td p {
+	text-align: center;
+	font-style: italic;
+}
+
+.tableCont table td a {
+	text-decoration: underline;
+	color: #057EC1;
+}
+
+.tableCont .actionsCont {
+	width: 100%;
+	text-align: right;
+	margin-top: 20px;
+	position: relative;
+}
+
+.tableCont .actionsCont a {
+	color: #909192;
+	margin-left: 20px
+}
+
+.tableCont .actionsCont a.addTask {
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 0;
+	color: #FFF;
+	background: #CECE0D;
+	padding: 5px 10px;
+	border: 1px solid #636333;
+}
+
+.tableCont .actionsCont a.addTask:hover {
+    background: #DFDF14;
+    text-decoration: none;
+}
+
+.tableCont .actionsCont .fixTask, .tableCont .actionsCont .removeTask, .tableCont .actionsCont .reAddTask, .tableCont .actionsCont .deleteTask  {
+	color: #FFF;
+	background: #CECE0D;
+	padding: 5px 10px;
+	border: 1px solid #636333;
+}
+
+.tableCont .actionsCont .fixTask:hover, .tableCont .actionsCont .removeTask:hover, .tableCont .actionsCont .reAddTask:hover, .tableCont .actionsCont .deleteTask:hover {
+	text-decoration: none;
+}
+	
+.tableCont .actionsCont .fixTask {
+	background: #1F7A13;
+}
+
+.tableCont .actionsCont .fixTask:hover {
+	background: #2C991E;
+}
+
+.tableCont .actionsCont .removeTask {
+	background: #A0200E;
+}
+
+.tableCont .actionsCont .removeTask:hover {
+	background: #CC3A25;
+}
+
+.tableCont .actionsCont .deleteTask {
+	background: #C03421;
+}
+
+.tableCont .actionsCont .deleteTask:hover {
+	background: #D3311B;
+}
+
+.tableCont .actionsCont .reAddTask {
+	background: #2A9B71;
+}
+
+.tableCont .actionsCont .reAddTask:hover {
+	background: #25BE86;
+}
+
+.createTaskCont {
+	position: relative;
+}
+
+.mainCont .backLink {
+	position: absolute;
+	top: 15px;
+	right: 21px;
+	font-size: 18px;
+	color: #0057A9;
+}
+
+.createTaskCont h2 {
+	color: #057EC1;
+	font-size: 24px;
+	font-weight: normal;
+	line-height: 1;
+	padding: 60px 0 10px 0;
+}
+
+.createTaskCont form {
+	display: block;
+	margin: 20px 0;
+}
+
+.createTaskCont form p { 
+	color: #514E4C;
+}
+
+.createTaskCont form input[type="text"], .createTaskCont form input[type="date"], .createTaskCont form input[type="password"] {
+	padding: 5px 0;
+	display: block;
+}
+
+.createTaskCont .stdBtn {
+	margin-top: 40px;
+}
+
+.stdBtn {
+	color: #0067BB;
+	font-size: 18px;
+	font-weight: bold;
+	padding: 5px 10px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	border: 1px solid #0067BB;
+	margin-left: 0px;
+	margin-right: 20px;
+	display: block;
+	float: left;
+}
+
+.br5 {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.stdBtn:hover {
+	text-decoration: none;
+}
+
+.mainTitle {
+	color: #0067BB;
+	font-size: 36px;
+	margin-top: 165px;
+	text-align: center;
+}
+
+.errorMsg {
+	color: #C1075B;
+	font-style: italic;
+}
+
+span.errorMsg {
+	display: none;
+	color: #C1075B;
+	font-style: italic;
+}
+
+span.errorMsg.show {
+	display: block;
+}
+
+.w30 {
+	width: 30%;
+}
+
+.selectFile {
+    overflow: hidden;
+	width: 92px;
+	height: 37px;
+	cursor: pointer;
+	background: url(img/selectBtn.png) no-repeat;;
+	margin-left: 0px;
+	margin-right: 30px;
+	display: block;
+	float: left;
+    }
+.selectFile .file {
+    opacity:0;
+    filter:alpha(opacity:0);
+    font-size:199px;
+    cursor:pointer;
+    padding:0px;
+    margin:0px;
+    border:none;
+    margin-left:-450px;
+ }
+ 
+ .w960 h3.selectFileTitle{
+ 	margin-bottom: 50px;
+ 	color: #0067BB;	
+ }
+ 
+}
