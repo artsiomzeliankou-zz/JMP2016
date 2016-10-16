@@ -30,13 +30,13 @@ import java.util.List;
 
 public class Runner {
 
-	final static int USERS_NUMBER = 10000000;
+	final static int USERS_NUMBER = 100;
 	final static int USER_NAME_MAX_LENGTH = 10;
 	final static int USER_MESSAGE_MAX_LENGTH = 50;
 	final static int MOVIE_TITLE_MAX_LENGTH = 20;
-	final static int FRIENDSIPS_MAX_NUMBER = 200;
-	final static int MOVIES_MAX_NUMBER = 100;
-	final static int MESSAGES_MAX_NUMBER = 1000;
+	final static int FRIENDSIPS_MAX_NUMBER = 150;
+	final static int MOVIES_MAX_NUMBER = 50;
+	final static int MESSAGES_MAX_NUMBER = 100;
 
 	final static String ALPHABET = "abcdefghijklmnopqrstuvwxyz";
 	final static String USER_BIRTHDAY_START_DATE = "1950-01-01 00:00:00";
@@ -45,13 +45,6 @@ public class Runner {
 	final static String OCT_15_2016_DATE = "2016-10-15 00:00:00";
 	final static String MESSAGE_START_DATE = "1990-01-01 00:00:00";
 	final static String MOVIE_WATCH_START_DATE = "2015-01-01 00:00:00";
-	
-	static Block<Document> printBlock = new Block<Document>() {
-		@Override
-		public void apply(final Document document) {
-			System.out.println(document.toJson());
-		}
-	};
 
 	public static void main(String[] args) {
 		
@@ -66,8 +59,8 @@ public class Runner {
 		populateDocuments(collection);
 		
 		printAverageNumberOfMessagesByDayOfWeek(collection);
-		printMaxNumberOfNewFriendshipsFroMonthToMonth(collection);
-		printMinNumberOfWatchedMoviesByUsersWithMoreThan100Friends(collection);
+		printMaxNumberOfNewFriendshipsFromMonthToMonth(collection);
+		printMinNumberOfWatchedMoviesByUsersWithMoreThan50Friends(collection);
 	            
 		}finally{
 			if(mongoClient != null){
@@ -78,22 +71,46 @@ public class Runner {
 	}
 
 	private static void printAverageNumberOfMessagesByDayOfWeek(MongoCollection<Document> collection) {
+		/**
+		 * db.my_network.aggregate([
+		 *  {$unwind: "$messages"},
+		 *  {$project:{"_id":0, messageDayOfWeek: {$dayOfWeek: "$messages.messageDate" }}},
+		 *  {$sort:{messageDayOfWeek:-1}},
+		 *  {$group:{"_id":{"day_of_week":"$messageDayOfWeek"}, "count":{"$sum":1}}}
+		 * ])
+		 */
+		Bson unwind = new BasicDBObject("$unwind", "$messages");
+		
+		DBObject projectFields = new BasicDBObject("_id", 0);
+		projectFields.put("messageDayOfWeek", new BasicDBObject("$dayOfWeek", "$messages.messageDate"));
+		Bson project = new BasicDBObject("$project", projectFields );
+		
+		Bson sort = new BasicDBObject("$sort", new BasicDBObject("messageDayOfWeek", -1));
+		
+		DBObject groupFields = new BasicDBObject("_id", new BasicDBObject("day_of_week", "$messageDayOfWeek"));
+		groupFields.put("count", new BasicDBObject("$sum", 1));
+		Bson group = new BasicDBObject("$group",groupFields);
+		
+		AggregateIterable<Document> result = collection.aggregate( Arrays.asList(unwind, project, sort, group));
+		System.out.println("\n Average number of messages by day of week: ");
+		for(Document doc: result){
+			System.out.println(doc.toJson());
+		}
+		
+	}
+
+	private static void printMaxNumberOfNewFriendshipsFromMonthToMonth(MongoCollection<Document> collection) {
 		// TODO Auto-generated method stub
 		
 	}
 
-	private static void printMaxNumberOfNewFriendshipsFroMonthToMonth(MongoCollection<Document> collection) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	private static void printMinNumberOfWatchedMoviesByUsersWithMoreThan100Friends(
+	private static void printMinNumberOfWatchedMoviesByUsersWithMoreThan50Friends(
 			MongoCollection<Document> collection) {
 		/**
 		 * db.my_network.aggregate([
-		 * {$project:{userName:1, userId:1, numberOfMovies:{$size: "$movies"}, numberOfFriends: { $size: "$friendShips" }}},
-		 * {$match:{numberOfFriends:{$gt: 100}}},
-		 * {$sort:{numberOfMovies:1}} 
+		 * 	{$project:{userName:1, userId:1, numberOfMovies:{$size: "$movies"}, numberOfFriends: { $size: "$friendShips" }}},
+		 * 	{$match:{numberOfFriends:{$gt: 50}}},
+		 * 	{$sort:{numberOfMovies:1}} 
 		 * ])
 		 */
 		DBObject fields = new BasicDBObject("userName", 1);
@@ -102,9 +119,14 @@ public class Runner {
 		fields.put("numberOfMovies", new BasicDBObject("$size", "$movies"));
 		fields.put("numberOfFriends", new BasicDBObject("$size", "$friendShips"));
 		Bson project = new BasicDBObject("$project", fields );
-		Bson match = new BasicDBObject("$match", new BasicDBObject("numberOfFriends",  new BasicDBObject("$gt", 100)));
+		
+		Bson match = new BasicDBObject("$match", new BasicDBObject("numberOfFriends",  new BasicDBObject("$gt", 10)));
+		
 		Bson sort = new BasicDBObject("$sort", new BasicDBObject("numberOfMovies", 1));
-		System.out.println(collection.aggregate( Arrays.asList(project, match, sort)).first().toJson());
+		
+		Document result = collection.aggregate( Arrays.asList(project, match, sort)).first();
+		System.out.println("\n Min number of watched movies by users with more than 50 friends: ");
+		System.out.println(result==null ? "Not found" : result.toJson());
 	}
 
 	private static void populateDocuments(MongoCollection<Document> collection) {
