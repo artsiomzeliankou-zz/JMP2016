@@ -8,16 +8,11 @@ import com.epam.jmp.nosql.entities.FriendShip;
 import com.epam.jmp.nosql.entities.Message;
 import com.epam.jmp.nosql.entities.Movie;
 import com.epam.jmp.nosql.entities.User;
-import com.mongodb.AggregationOutput;
 import com.mongodb.BasicDBObject;
-import com.mongodb.Block;
 import com.mongodb.DBObject;
 import com.mongodb.MongoClient;
 
 import com.mongodb.client.MongoDatabase;
-import com.mongodb.client.model.Accumulators;
-import com.mongodb.client.model.Aggregates;
-import com.mongodb.client.model.Filters;
 import com.mongodb.client.AggregateIterable;
 import com.mongodb.client.MongoCollection;
 
@@ -100,7 +95,31 @@ public class Runner {
 	}
 
 	private static void printMaxNumberOfNewFriendshipsFromMonthToMonth(MongoCollection<Document> collection) {
-		// TODO Auto-generated method stub
+		/**
+		 * db.my_network.aggregate([
+		 *  {$unwind: "$friendShips"},
+		 *  {$project:{"_id":0, friendShipMonth: {$month: "$friendShips.friendShipDate" }}},
+		 *  {$sort:{friendShipMonth:1}},
+		 * {$group:{"_id":{"month":"$friendShipMonth"}, "count":{"$sum":1}}}
+		 * ])
+		 */
+		Bson unwind = new BasicDBObject("$unwind", "$friendShips");
+		
+		DBObject projectFields = new BasicDBObject("_id", 0);
+		projectFields.put("friendShipMonth", new BasicDBObject("$month", "$friendShips.friendShipDate"));
+		Bson project = new BasicDBObject("$project", projectFields );
+		
+		Bson sort = new BasicDBObject("$sort", new BasicDBObject("friendShipMonth", 1));
+		
+		DBObject groupFields = new BasicDBObject("_id", new BasicDBObject("month", "$friendShipMonth"));
+		groupFields.put("count", new BasicDBObject("$sum", 1));
+		Bson group = new BasicDBObject("$group",groupFields);
+		
+		AggregateIterable<Document> result = collection.aggregate( Arrays.asList(unwind, project, sort, group));
+		System.out.println("\n Max number of new friendships from month to month: ");
+		for(Document doc: result){
+			System.out.println(doc.toJson());
+		}
 		
 	}
 
