@@ -1,0 +1,20 @@
+1. Checkout repository
+
+2. Open command prompt in "rest-service" folder and perform command "mvn clean package"
+
+3. Copy result war-file from "target" folder into "webapps" folder of your local tomcat installation and start tomcat
+
+4. Check whether the application was started by opening next URL in browser
+	localhost:{tomcat_port}/user-service/rest/users/test
+	
+	In case of success you'll see message with text "Hello User!"
+	
+5. Import "rest-client" project in your IDE, open class com.epam.jmp.RestClient 
+	and change next constants according your local environment:
+	
+	private static final String BASE_URL = "http://localhost:8487/user-service/rest";
+	private static final String LOGO_PATH = "D:/test";
+	private static final String LOGO_FILE_NAME = "EPAM_Logo.png";
+	private static final String LOGO_NAME = "EPAM_Logo";
+	
+6. Run class com.epam.jmp.RestClient as java and see console output.
