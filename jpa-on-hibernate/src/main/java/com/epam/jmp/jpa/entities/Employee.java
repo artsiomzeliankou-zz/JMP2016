@@ -38,13 +38,32 @@ public class Employee {
 	private Personal personalInfo;
 	
 	@ManyToMany
-	@JoinTable(name = "EMPLOYEE_TO_PROJECTS", joinColumns = @JoinColumn(name = "EMPLOYEE_ID", referencedColumnName = "ID"), inverseJoinColumns = @JoinColumn(name = "PROJECT_ID", referencedColumnName = "ID"))
+	@JoinTable(
+			name = "EMPLOYEE_TO_PROJECTS", 
+			joinColumns = @JoinColumn(name = "EMPLOYEE_ID", referencedColumnName = "ID"), 
+			inverseJoinColumns = @JoinColumn(name = "PROJECT_ID", referencedColumnName = "ID"))
 	private Set<Project> projects = new HashSet<>();
 
 	@ManyToOne
 	@JoinColumn(name = "UNIT")
 	private Unit unit;
 
+	@Override
+	public String toString(){
+		
+		StringBuilder sb = new StringBuilder(""); 
+		for(Project project : projects){
+			sb.append(project.getProjectCode()).append(";");
+		}
+		
+		return "\nEmlpoyee: [name: " + personalInfo.getFirstName() + " " + personalInfo.getLastName()
+				+ "], [email: " + personalInfo.getEmail()
+				+ "], [address: " + address.getStreet() + " "  + address.getHouse() + " "  + address.getFlat()
+				+ "], [status: " + employeeStatus
+				+ "], [projects: " + sb.toString()
+				+ "]";
+	}
+	
 	public long getId() {
 		return id;
 	}

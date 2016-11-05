@@ -27,6 +27,20 @@ public class Unit {
 	@OneToMany(fetch = FetchType.EAGER, mappedBy = "unit", cascade = CascadeType.ALL)
     private List<Employee> employees = new ArrayList<>();
 
+	@Override
+	public String toString() {
+		
+		StringBuilder sb = new StringBuilder(""); 
+		for(Employee employee : employees){
+			sb.append(employee.getPersonalInfo().getFirstName())
+				.append(" ").append(employee.getPersonalInfo().getLastName())
+				.append(";");
+		}
+		return "Unit: [name: " + name
+					+ "], [employees: " + sb.toString()
+					+ "]";
+	}
+	
 	public long getId() {
 		return id;
 	}

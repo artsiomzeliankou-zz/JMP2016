@@ -1,6 +1,5 @@
 package com.epam.jmp.jpa.entities;
 
-import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -24,7 +23,7 @@ public class Project {
     private String projectCode;
 	
 	@Column(name = "EFFECTIVE_DATE")
-    private Date effectiveDate;
+    private String effectiveDate;
 	
 	@Column(name = "MEMBERS_NUMBER")
 	private int membersNumber;
@@ -33,6 +32,22 @@ public class Project {
     private Set<Employee> employees = new HashSet<>();
 
 	
+	@Override
+	public String toString() {
+		
+		StringBuilder sb = new StringBuilder(""); 
+		for(Employee employee : employees){
+			sb.append(employee.getPersonalInfo().getFirstName())
+				.append(" ").append(employee.getPersonalInfo().getLastName())
+				.append(";");
+		}
+		return "Project: [code: " + projectCode
+					+ "], [effectiveDate: " + effectiveDate
+					+ "], [membersNumber: " + membersNumber
+					+ "], [members: " + sb.toString()
+					+ "]";
+	}
+
 	public long getId() {
 		return id;
 	}
@@ -49,11 +64,11 @@ public class Project {
 		this.projectCode = projectCode;
 	}
 
-	public Date getEffectiveDate() {
+	public String getEffectiveDate() {
 		return effectiveDate;
 	}
 
-	public void setEffectiveDate(Date effectiveDate) {
+	public void setEffectiveDate(String effectiveDate) {
 		this.effectiveDate = effectiveDate;
 	}
 
