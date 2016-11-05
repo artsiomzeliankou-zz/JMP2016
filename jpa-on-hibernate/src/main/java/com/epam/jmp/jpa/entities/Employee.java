@@ -38,7 +38,7 @@ public class Employee {
 	private Personal personalInfo;
 	
 	@ManyToMany
-	@JoinTable(name = "EMPLOYEE_TO_PROJECTS", joinColumns = @JoinColumn(name = "EMPLOYEE_ID", referencedColumnName = "ID"), inverseJoinColumns = @JoinColumn(name = "GRANDCHILD_ID", referencedColumnName = "ID"))
+	@JoinTable(name = "EMPLOYEE_TO_PROJECTS", joinColumns = @JoinColumn(name = "EMPLOYEE_ID", referencedColumnName = "ID"), inverseJoinColumns = @JoinColumn(name = "PROJECT_ID", referencedColumnName = "ID"))
 	private Set<Project> projects = new HashSet<>();
 
 	@ManyToOne

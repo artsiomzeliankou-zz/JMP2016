@@ -5,7 +5,15 @@
 	version="2.1">
 
 	<persistence-unit name="JMP">
+		
 		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+		
+		<class>com.epam.jmp.jpa.entities.Employee</class>
+		<class>com.epam.jmp.jpa.entities.Address</class>
+		<class>com.epam.jmp.jpa.entities.Personal</class>
+		<class>com.epam.jmp.jpa.entities.Project</class>
+		<class>com.epam.jmp.jpa.entities.Unit</class>
+		
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="org.h2.Driver" />
 			<property name="javax.persistence.jdbc.url" value="jdbc:h2:mem:db1;DB_CLOSE_DELAY=-1;MVCC=TRUE" />
@@ -14,7 +22,7 @@
 			<property name="hibernate.show_sql" value="true" />
 			<property name="hibernate.hbm2ddl.auto" value="update" />
 		</properties>
+		
 	</persistence-unit>
-
 
 </persistence>

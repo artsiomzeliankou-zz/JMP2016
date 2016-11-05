@@ -19,10 +19,13 @@ public class Project {
 	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
+	
 	@Column(name = "PROJECT_CODE")
     private String projectCode;
+	
 	@Column(name = "EFFECTIVE_DATE")
     private Date effectiveDate;
+	
 	@Column(name = "MEMBERS_NUMBER")
 	private int membersNumber;
 	
